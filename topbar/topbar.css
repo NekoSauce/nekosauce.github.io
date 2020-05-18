@@ -1,0 +1,58 @@
+html, body {
+  margin: 0;
+}
+
+#topbar-neo, #topbar-neo > div {
+	box-sizing: border-box;
+}
+
+#topbar-neo { 
+  width: 100%;
+}
+
+#topbar-neo .topbar-wrapper {
+ 	border: 1px solid black;
+  	display: table;
+}
+
+#topbar-neo .tb-span-layout {
+	vertical-align: middle;
+	padding: 0px 10px 0px 10px;
+}
+
+#topbar-neo .tb-option-display {
+	display: table-cell;
+}
+
+#topbar-neo #tb-username {
+	width: 30%;
+}
+
+#topbar-neo .tb-options-buttons {
+	text-align: center;
+	width: 14%;
+	cursor: pointer;
+	font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+
+.tb-options-buttons span::after {
+	display: block;
+	content: "Hi";
+	text-align: center;
+}
+
+/** TOPBAR USERNAME DEFAULTS **/
+#tb-username-external {
+	display: none;
+}
+
+/** TOPBAR MEDIA QUERIES **/
+	@media (max-width : 320px) {
+		#tb-username-internal {
+			display: none;
+		}
+
+		#tb-username-external {
+			display: block;
+		}
+	}
