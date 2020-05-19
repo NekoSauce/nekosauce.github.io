@@ -1,3 +1,3 @@
 function Moderate() {
-	alert($(window).width());
+	alert($("#topbar-neo").width());
 }
