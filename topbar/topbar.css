@@ -85,8 +85,8 @@ html, body {
 		content: 'Talk To Us!';
 	}
 
-	@media (max-width: 980px) {
-		.tb-options-buttons-labels::after {
+	@media only screen and (max-width: 767px) {
+	    .tb-options-buttons-labels::after {
 			display: none;
 		}
 	}
