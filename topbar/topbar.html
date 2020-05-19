@@ -4,29 +4,37 @@
 		<title></title>
 
 		<script src="https://kit.fontawesome.com/7528cb5aa7.js" crossorigin="anonymous"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+		<script src="topbar.js"></script>
+
+		<link href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap" rel="stylesheet">
 	</head>
 
 	<body>
 		<div id="topbar-neo">
 			<div class="topbar-wrapper">
-				<div id="tb-username-internal" class="tb-username topbar-options tb-span-layout">Username</div>
-				<div id="" class="topbar-options tb-span-layout tb-options tb-options-buttons">
-					<i class="fas fa-cog"></i>
+				<div id="tb-username-internal" class="tb-username tb-scaling-font topbar-options tb-span-layout"><span class="tb-options-buttons-labels tb-username-label tb-username-loggedin">{Username}</span></div>
+				<div id="" class="topbar-options tb-scaling-font tb-span-layout tb-options tb-options-buttons">
+					<i class="fas fa-cog tb-options-buttons-labels tb-label-usersettings"></i>
 				</div>
-				<div id="" class="topbar-options tb-span-layout tb-options-buttons">
-					<i class="fas fa-users"></i>
+				<div id="" class="topbar-options tb-scaling-font tb-span-layout tb-options-buttons">
+					<i class="fas fa-users tb-options-buttons-labels tb-label-accountswitch"></i>
 				</div>
-				<div id="" class="topbar-options tb-span-layout tb-options-buttons">
-					<i class="fas fa-envelope"></i>
+				<div id="" class="topbar-options tb-scaling-font tb-span-layout tb-options-buttons">
+					<i class="fas fa-envelope tb-options-buttons-labels tb-label-pms"></i>
 				</div>
-				<div id="" class="topbar-options tb-span-layout tb-options-buttons">
-					<i class="fas fa-bars"></i>
+				<div id="" class="topbar-options tb-scaling-font tb-span-layout tb-options-buttons">
+					<i class="fas fa-bars tb-options-buttons-labels tb-label-settingmenu"></i>
 				</div>
-				<div id="" class="topbar-options tb-span-layout tb-options-buttons">
-					<i class="fab fa-discord"></i>
+				<div id="" class="topbar-options tb-scaling-font tb-span-layout tb-options-buttons">
+					<i class="fab fa-discord tb-options-buttons-labels tb-label-discord"></i>
 				</div>
 			</div>
 		</div>
+
+		<br /><br /><br />
+		<button onclick="Moderate();">check</button>
 	</body>
 
 	<link rel="stylesheet" href="topbar.css" />

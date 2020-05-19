@@ -2,6 +2,7 @@ html, body {
   margin: 0;
 }
 
+
 #topbar-neo, #topbar-neo > div {
 	box-sizing: border-box;
 }
@@ -21,19 +22,71 @@ html, body {
 	padding: 10px;
 }
 
-#topbar-neo #tb-username {
+#topbar-neo .tb-username {
 	width: 45%;
+	font-weight: bolder;
+	font-family: 'Squada One';
 }
 
 #topbar-neo .tb-options-buttons {
 	text-align: center;
-	//border: 1px solid red;
 	width: 11%;
 	cursor: pointer;
-	//font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+	font-size: 'Squada One';
 }
 
-.tb-options-buttons span::after {
-	display: block;
-	text-align: center;
+#topbar-neo .tb-scaling-font {
+	font-size: calc(20px + (22 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
+
+/** Labels **/
+	.tb-options-labels::before, .tb-options-buttons-labels::after {
+		display: block;
+		font-size: 0.7em;
+	}
+
+	.tb-username-label::before {
+		content: 'Hello,';
+		margin-bottom: -5px;
+		display: block;
+		font-size: 0.7em;
+	}
+
+	.tb-username-loggedin::after {
+		content: 'Click to log out.';
+		font-size: 0.6em;
+	}
+
+	.tb-options-buttons-labels::after {
+		display: block;
+		font-size: calc(9px + (22 - 14) * ((100vw - 300px) / (1600 - 300)));
+		font-weight: normal;
+		font-family: 'Squada One';
+		margin-top: 5px;
+	}
+
+	.tb-label-usersettings::after {
+		content: 'User Controls';
+	}
+
+	.tb-label-accountswitch::after {
+		content: 'Switch Accounts';
+	}
+
+	.tb-label-pms::after {
+		content: 'Messages';
+	}
+
+	.tb-label-settingmenu::after {
+		content: 'Navigation';
+	}
+
+	.tb-label-discord::after {
+		content: 'Talk To Us!';
+	}
+
+	@media (max-width: 900px) {
+		.tb-options-buttons-labels::after {
+			display: none;
+		}
+	}
