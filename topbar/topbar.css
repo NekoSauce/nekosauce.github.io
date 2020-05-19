@@ -85,7 +85,7 @@ html, body {
 		content: 'Talk To Us!';
 	}
 
-	@media only screen and (max-width: 767px) {
+	@media (device-width: 320px) {
 	    .tb-options-buttons-labels::after {
 			display: none;
 		}
