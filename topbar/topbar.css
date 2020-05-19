@@ -7,7 +7,7 @@ html, body {
 }
 
 #topbar-neo { 
-  width: 100%;
+  	width: 100%;
 }
 
 #topbar-neo .topbar-wrapper {
@@ -19,10 +19,6 @@ html, body {
 	display: table-cell;
 	vertical-align: middle;
 	padding: 10px;
-}
-
-#topbar-neo .tb-option-display {
-	
 }
 
 #topbar-neo #tb-username {
