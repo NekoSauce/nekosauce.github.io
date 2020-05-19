@@ -57,7 +57,7 @@ html, body {
 		font-size: 0.6em;
 	}
 
-	.tb-options-buttons-labels::after {
+	.tb-options-buttons-labels::after, .tb-username-label::after {
 		display: block;
 		font-size: calc(9px + (22 - 14) * ((100vw - 300px) / (1600 - 300)));
 		font-weight: normal;
@@ -85,8 +85,15 @@ html, body {
 		content: 'Talk To Us!';
 	}
 
-	@media (max-width: 420px) {
+	@media (max-width: 880px) {
 	    .tb-options-buttons-labels::after {
 			display: none;
 		}
 	}
+
+	@media (max-width: 359px) {
+		.tb-username-label::after {
+			display: none;
+		}
+	}
+	
