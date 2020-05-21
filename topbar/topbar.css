@@ -2,8 +2,12 @@ html, body {
   margin: 0;
 }
 
+:root {
+	--main-topbar-font-style: 'Squada One';
+}
 
-#topbar-neo, #topbar-neo > div {
+/** TOPBAR styling **/
+#topbar-neo, #topbar-neo div {
 	box-sizing: border-box;
 }
 
@@ -25,14 +29,14 @@ html, body {
 #topbar-neo .tb-username {
 	width: 45%;
 	font-weight: bolder;
-	font-family: 'Squada One';
+	font-family: var(--main-topbar-font-style);
 }
 
 #topbar-neo .tb-options-buttons {
 	text-align: center;
 	width: 11%;
 	cursor: pointer;
-	font-size: 'Squada One';
+	font-size: var(--main-topbar-font-style);
 }
 
 #topbar-neo .tb-scaling-font {
@@ -59,18 +63,30 @@ html, body {
 
 	.tb-options-buttons-labels::after, .tb-username-label::after {
 		display: block;
-		font-size: calc(9px + (22 - 14) * ((100vw - 300px) / (1600 - 300)));
 		font-weight: normal;
-		font-family: 'Squada One';
+		font-family: var(--main-topbar-font-style);
 		margin-top: 5px;
 	}
 
+	.topbar-wrapper .tb-options-buttons-labels {
+		font-size: calc(20px + (22 - 14) * ((100vw - 300px) / (1600 - 300)));
+	}
+
+	.topbar-context-menu-wrapper .tb-options-buttons-labels {
+		font-size: calc(15px + (22 - 14) * ((100vw - 300px) / (1600 - 300)));
+	}
+
+	.ar-hidden-content > .tb-options-buttons-labels::after {
+		display: none;
+	}
+
+	/** Labels Content... **/
 	.tb-label-usersettings::after {
 		content: 'User Controls';
 	}
 
 	.tb-label-accountswitch::after {
-		content: 'Switch Accounts';
+		content: 'Accounts';
 	}
 
 	.tb-label-pms::after {
@@ -78,22 +94,77 @@ html, body {
 	}
 
 	.tb-label-settingmenu::after {
-		content: 'Navigation';
+		content: 'Info Nexus';
 	}
 
 	.tb-label-discord::after {
 		content: 'Talk To Us!';
 	}
 
-	@media (max-width: 880px) {
-	    .tb-options-buttons-labels::after {
-			display: none;
-		}
+	.tcm-option-usercp::after {
+		content: 'user cp';
 	}
 
-	@media (max-width: 359px) {
-		.tb-username-label::after {
-			display: none;
-		}
+	.tcm-option-modcp::after {
+		content: 'mod cp';
+	}
+
+	.tcm-option-admincp::after {
+		content: 'admin cp'
+	}
+
+	.tcm-option-guidebook::after {
+		content: 'guidebook';
+	}
+
+	.tcm-option-map::after {
+		content: 'map';
+	}
+
+	.tcm-option-worldstate::after {
+		content: 'world state';
 	}
 	
+/** TOPBAR CONTEXT MENU CODE
+  * TO BE REFACTORED... **/
+.topbar-context-menu-wrapper {
+	width: auto;
+	//display: flex;
+	font-family: var(--main-topbar-font-style);
+}
+
+.tcm-innerwrapper {
+	display: flex;
+	justify-content: center;
+}
+
+.tcm-options {
+	border: 1px solid black;
+	padding: 20px;
+	flex-grow: 0;
+	flex-shrink: 0;
+}
+
+.tcm-options-title {
+	//font-size: calc(20px + (22 - 14) * ((100vw - 300px) / (1600 - 300)));
+	font-size: 23px;
+	display: block;
+	text-align: center;
+	padding: 4px 0px 4px 0px;
+}
+
+.tcm-options-button {
+	flex-basis: 16%;
+	text-align: center;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+
+.tcm-options-button .tb-options-buttons-labels::before {
+	font-size: 1.5em;
+}
+
+.tcm-options-button .tb-options-buttons-labels::after {
+	letter-spacing: 1px;
+}

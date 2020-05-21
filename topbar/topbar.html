@@ -17,26 +17,34 @@
 		<div id="topbar-neo">
 			<div class="topbar-wrapper">
 				<div id="tb-username-internal" class="tb-username tb-scaling-font topbar-options tb-span-layout"><span class="tb-username-label tb-username-loggedin">{Username}</span></div>
-				<div id="" class="topbar-options tb-scaling-font tb-span-layout tb-options tb-options-buttons">
+				<div data="staff-ucp-options" class="topbar-options tb-context-menu-opener tb-scaling-font tb-span-layout tb-options tb-options-buttons">
 					<i class="fas fa-cog tb-options-buttons-labels tb-label-usersettings"></i>
 				</div>
-				<div id="" class="topbar-options tb-scaling-font tb-span-layout tb-options-buttons">
+				<div class="topbar-options tb-scaling-font tb-span-layout tb-options-buttons">
 					<i class="fas fa-users tb-options-buttons-labels tb-label-accountswitch"></i>
 				</div>
-				<div id="" class="topbar-options tb-scaling-font tb-span-layout tb-options-buttons">
+				<div class="topbar-options tb-scaling-font tb-span-layout tb-options-buttons">
 					<i class="fas fa-envelope tb-options-buttons-labels tb-label-pms"></i>
 				</div>
-				<div id="" class="topbar-options tb-scaling-font tb-span-layout tb-options-buttons">
+				<div data="site-information-options" class="topbar-options tb-scaling-font tb-span-layout tb-options-buttons tb-context-menu-opener">
 					<i class="fas fa-bars tb-options-buttons-labels tb-label-settingmenu"></i>
 				</div>
-				<div id="" class="topbar-options tb-scaling-font tb-span-layout tb-options-buttons">
+				<div class="topbar-options tb-scaling-font tb-span-layout tb-options-buttons">
 					<i class="fab fa-discord tb-options-buttons-labels tb-label-discord"></i>
 				</div>
 			</div>
-		</div>
+			<div class="topbar-context-menu-wrapper" style="display: none;">
+				<div class="tcm-options tcm-options-title">Information Matrix</div>
+				<div class="tcm-innerwrapper">
+					<div class="tcm-options tcm-options-button"><i class="fas fa-book tb-options-buttons-labels tcm-option-guidebook"></i></div>
 
-		<br /><br /><br />
-		<button onclick="Moderate();">check</button>
+					<div class="tcm-options tcm-options-button"><i class="fas fa-globe-americas tb-options-buttons-labels tcm-option-map"></i></div>
+
+					<div class="tcm-options tcm-options-button"><i class="fas fa-newspaper tb-options-buttons-labels tcm-option-worldstate"></i></div>
+				</div>
+			</div>
+		</div>
+		<!--<button onclick="Moderate();">check</button>-->
 	</body>
 
 	<link rel="stylesheet" href="topbar.css" />
