@@ -147,7 +147,7 @@ html, body {
 
 .tcm-options-title {
 	//font-size: calc(20px + (22 - 14) * ((100vw - 300px) / (1600 - 300)));
-	font-size: 23px;
+	font-size: 20px;
 	display: block;
 	text-align: center;
 	padding: 4px 0px 4px 0px;
