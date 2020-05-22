@@ -26,10 +26,9 @@ function contentToPopulateMenu(context) {
 }
 
 function toggleContextMenu(menu, currentButton) {
-	//if(!menu.is(":visible"))
-	//	alert(currentButton.attr("data"));
-
 	menu.slideToggle();
+
+	$("#tcm-replaceable-content").html(s);
 }
 
 var s = `<div class="tcm-options tcm-options-title">User Controls Matrix</div>
@@ -42,10 +41,10 @@ var s = `<div class="tcm-options tcm-options-title">User Controls Matrix</div>
 			</div>`;
 
 var ss = `<div class="tcm-options tcm-options-title">Information Matrix</div>
-				<div class="tcm-innerwrapper">
-					<div class="tcm-options tcm-options-button"><i class="fas fa-book tb-options-buttons-labels tcm-option-guidebook"></i></div>
+			<div class="tcm-innerwrapper">
+				<div class="tcm-options tcm-options-button"><i class="fas fa-book tb-options-buttons-labels tcm-option-guidebook"></i></div>
 
-					<div class="tcm-options tcm-options-button"><i class="fas fa-globe-americas tb-options-buttons-labels tcm-option-map"></i></div>
+				<div class="tcm-options tcm-options-button"><i class="fas fa-globe-americas tb-options-buttons-labels tcm-option-map"></i></div>
 
-					<div class="tcm-options tcm-options-button"><i class="fas fa-newspaper tb-options-buttons-labels tcm-option-worldstate"></i></div>
-				</div>`;
+				<div class="tcm-options tcm-options-button"><i class="fas fa-newspaper tb-options-buttons-labels tcm-option-worldstate"></i></div>
+			</div>`;
